@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="id" data-accent="pink" data-theme="auto">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+<title>M. Fernando Pratama — Desainer Grafis yang Ngoding | Portofolio DKV &amp; Sistem Informasi</title>
+<meta name="description" content="Portofolio M. Fernando Pratama — perjalanan dari desainer grafis ke web developer: branding, konten media sosial, materi promosi, sampai website yang dibangun sendiri pakai HTML, CSS, dan JavaScript. Lulusan DKV SMK Negeri 7 Palembang, mahasiswa Sistem Informasi Universitas Terbuka Palembang." />
+<meta name="author" content="M. Fernando Pratama" />
+<meta name="keywords" content="desainer grafis, desainer grafis Palembang, web developer, portofolio, DKV, desain komunikasi visual, sistem informasi, branding, freelancer Indonesia" />
+<meta name="robots" content="index, follow" />
+<meta name="format-detection" content="telephone=no" />
+
+<!-- Warna address bar browser (iOS Safari / Android) -->
+<meta name="theme-color" content="#f6f4ff" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#07050f" media="(prefers-color-scheme: dark)" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Porto Nando" />
+
+<!-- GANTI: isi domain kamu setelah deploy, lalu aktifkan baris canonical di bawah -->
+<!-- <link rel="canonical" href="https://namakamu.com/" /> -->
+
+<!-- Social share (Open Graph + Twitter) -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:title" content="M. Fernando Pratama — Desainer Grafis yang Ngoding" />
+<meta property="og:description" content="Dari artboard ke code editor. Lihat karya desain dan website yang aku bangun sendiri." />
+<!-- Ganti jadi URL absolut (https://domainmu.com/img/opt/burger-2.jpg) setelah deploy -->
+<meta property="og:image" content="img/opt/burger-2.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>" />
+
+<!-- Preview tema sebelum CSS dimuat supaya tidak "kedip" -->
+<script>
+  (function () {
+    var html = document.documentElement;
+    html.classList.add('js');
+    try {
+      var tema = localStorage.getItem('porto-theme');
+      if (tema === 'light' || tema === 'dark') html.setAttribute('data-theme', tema);
+      var aksen = localStorage.getItem('porto-accent');
+      if (aksen) html.setAttribute('data-accent', aksen);
+    } catch (e) { /* mode privat: pakai default */ }
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+
+<!-- Data terstruktur untuk Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "M. Fernando Pratama",
+  "alternateName": "Nando",
+  "jobTitle": "Desainer Grafis & Web Developer",
+  "email": "mailto:fernandopratama0327@gmail.com",
+  "description": "Desainer grafis yang sedang bertransisi ke dunia coding: branding, konten media sosial, materi promosi, dan website.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Palembang",
+    "addressCountry": "ID"
+  },
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "SMK Negeri 7 Palembang" },
+    { "@type": "CollegeOrUniversity", "name": "Universitas Terbuka Palembang" }
+  ],
+  "knowsAbout": ["Desain Grafis", "Desain Komunikasi Visual", "Branding", "Adobe Photoshop", "Adobe Illustrator", "CorelDRAW", "Canva", "HTML", "CSS", "JavaScript", "Sistem Informasi"],
+  "sameAs": [
+    "https://instagram.com/NanDoo_"
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ====== LATAR AURORA (hanya dekorasi) ====== -->
+<div class="aurora" aria-hidden="true">
+  <span class="aurora__blob aurora__blob--1"></span>
+  <span class="aurora__blob aurora__blob--2"></span>
+  <span class="aurora__blob aurora__blob--3"></span>
+</div>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<a class="skip-link" href="#karya">Lewati ke karya</a>
+
+<!-- ====== NAVBAR ====== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo" aria-label="Ke atas halaman">
+      <span class="nav__logo-star" aria-hidden="true">✦</span>
+      <span class="nav__logo-text">nando<b>.dev</b></span>
+    </a>
+
+    <nav class="nav__menu" id="navMenu" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#skill">Skill</a>
+      <a href="#karya">Karya</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#kontak" class="nav__cta">Ajak Kerja Sama</a>
+    </nav>
+
+    <div class="nav__right">
+      <div class="switcher" role="group" aria-label="Ganti warna tema">
+        <button class="switcher__dot" data-accent="pink"   aria-label="Tema pink-ungu"></button>
+        <button class="switcher__dot" data-accent="blue"   aria-label="Tema biru"></button>
+        <button class="switcher__dot" data-accent="green"  aria-label="Tema hijau"></button>
+        <button class="switcher__dot" data-accent="orange" aria-label="Tema oranye"></button>
+      </div>
+
+      <button class="theme sound" id="soundToggle" type="button" aria-label="Matikan efek suara" aria-pressed="true" title="Efek suara">
+        <span class="theme__icon" id="soundIcon" aria-hidden="true">🔊</span>
+        <span class="theme__text" id="soundText">Suara</span>
+      </button>
+
+      <button class="theme" id="themeToggle" aria-label="Ganti mode gelap atau terang" title="Mode tampilan">
+        <span class="theme__icon" id="themeIcon" aria-hidden="true">◐</span>
+        <span class="theme__text" id="themeText">Auto</span>
+      </button>
+
+      <button class="nav__burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="home">
+  <div class="hero__inner">
+
+    <div class="hero__text">
+      <p class="badge reveal">
+        <span class="badge__dot" aria-hidden="true"></span>
+        Open for freelance &amp; full-time
+      </p>
+
+      <h1 class="hero__title reveal">
+        <span class="hero__line">Hai, aku</span>
+        <span class="hero__name">M. Fernando Pratama</span>
+        <span class="hero__line hero__line--sm">
+          dari <span class="mark mark--design">desain</span>
+          <span class="arrow" aria-hidden="true">➜</span>
+          ke <span class="mark mark--code">code</span>
+        </span>
+      </h1>
+
+      <p class="hero__sub reveal">
+        Awalnya cuma main <em>Adobe Illustrator</em>, <em>Photoshop</em>, dan <em>CorelDRAW</em>,
+        sekarang mulai ngulik <em>HTML, CSS, JavaScript</em>. Aku bikin visual yang enak dilihat —
+        sekaligus website yang cepat, responsif, dan enak dibuka di iPhone maupun MacBook.
+      </p>
+
+      <div class="hero__actions reveal">
+        <a href="#karya" class="btn btn--primary">Lihat Karya <span aria-hidden="true">→</span></a>
+        <a href="#kontak" class="btn btn--ghost">Ngobrol Dulu</a>
+      </div>
+
+      <ul class="hero__facts reveal">
+        <li><strong>4</strong><span>Tahun praktik desain</span></li>
+        <li><strong>10</strong><span>Tools desain &amp; coding</span></li>
+        <li><strong>2</strong><span>Dunia: DKV &amp; Sistem Informasi</span></li>
+      </ul>
+    </div>
+
+    <!-- Kartu sakti: satu klik untuk lihat proses "desain ➜ coding" -->
+    <div class="hero__visual reveal">
+      <div class="modecard glass" id="modeCard">
+        <div class="modecard__top">
+          <span class="modecard__label" id="modeLabel">Mode: Desain</span>
+          <button class="modeswitch" id="modeToggle" type="button" aria-pressed="false">
+            <span class="modeswitch__knob" aria-hidden="true"></span>
+            <span class="modeswitch__text">Desain <b aria-hidden="true">⇄</b> Code</span>
+          </button>
+        </div>
+
+        <div class="modecard__stage">
+          <!-- Lapisan 1: artboard desain (murni CSS, tanpa gambar) -->
+          <div class="artboard" id="artboard" aria-hidden="true">
+            <div class="artboard__bar">
+              <i></i><i></i><i></i>
+              <em>hero-poster.fig</em>
+            </div>
+            <div class="artboard__body">
+              <div class="sw sw--1"></div>
+              <div class="sw sw--2"></div>
+              <div class="sw sw--3"></div>
+              <div class="sw sw--4"></div>
+              <div class="artboard__type">Aa</div>
+              <div class="artboard__meta">
+                <span>1080 × 1080 px</span>
+                <span>CMYK ready</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lapisan 2: code editor -->
+          <div class="codewin" id="codewin" aria-hidden="true">
+            <div class="codewin__bar">
+              <span class="codewin__dot"></span>
+              <span class="codewin__dot"></span>
+              <span class="codewin__dot"></span>
+              <em>index.html</em>
+            </div>
+            <pre class="codewin__code"><code><span class="c-tag">&lt;section</span> <span class="c-attr">class</span>=<span class="c-str">"hero"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;h1&gt;</span>Hai, aku <span class="c-em">Nando</span><span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;p&gt;</span>Desain dulu, kode kemudian.<span class="c-tag">&lt;/p&gt;</span>
+  <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"#karya"</span><span class="c-tag">&gt;</span>Lihat karya<span class="c-tag">&lt;/a&gt;</span>
+<span class="c-tag">&lt;/section&gt;</span><span class="cursor"></span></code></pre>
+          </div>
+        </div>
+
+        <p class="modecard__hint" id="modeHint">
+          Aku mulai dari grid, warna, dan tipografi — lalu semua itu aku bangun ulang jadi kode.
+        </p>
+      </div>
+
+      <span class="floatchip floatchip--a" aria-hidden="true">✦ Figma brain</span>
+      <span class="floatchip floatchip--b" aria-hidden="true">&lt;/&gt; CSS lover</span>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>BRANDING</span><span>✳</span><span>UI DESIGN</span><span>✳</span><span>CONTENT SOSMED</span><span>✳</span>
+      <span>HTML</span><span>✳</span><span>CSS</span><span>✳</span><span>JAVASCRIPT</span><span>✳</span>
+      <span>POSTER &amp; FLYER</span><span>✳</span><span>PACKAGING</span><span>✳</span><span>SISTEM INFORMASI</span><span>✳</span>
+      <span>BRANDING</span><span>✳</span><span>UI DESIGN</span><span>✳</span><span>CONTENT SOSMED</span><span>✳</span>
+      <span>HTML</span><span>✳</span><span>CSS</span><span>✳</span><span>JAVASCRIPT</span><span>✳</span>
+      <span>POSTER &amp; FLYER</span><span>✳</span><span>PACKAGING</span><span>✳</span><span>SISTEM INFORMASI</span><span>✳</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TENTANG (BENTO GRID) ====== -->
+<section class="section" id="tentang">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">01</span>
+      <h2 class="section__title">Tentang Aku</h2>
+    </div>
+
+    <div class="bento">
+
+      <article class="bento__card bento__card--intro glass reveal">
+        <span class="bento__label">Perkenalan</span>
+        <h3 class="bento__title">Dua dunia, satu orang</h3>
+        <p>
+          Aku nyaman di dua tempat: <strong>kanvas desain</strong> dan <strong>code editor</strong>.
+          Dari <strong>Desain Komunikasi Visual</strong> di SMK Negeri 7 Palembang aku belajar soal
+          estetika, hierarki, dan pesan yang mau disampaikan. Sekarang aku lanjut di
+          <strong>Sistem Informasi</strong> Universitas Terbuka Palembang — di situ aku belajar logika,
+          alur sistem, dan gimana teknologi dipakai buat menyelesaikan masalah nyata.
+        </p>
+        <p>
+          Perjalanannya pelan tapi jelas: mulai dari bikin poster, banner, dan feed sosmed untuk
+          klien seperti <strong>Rumah Songket Gadis Palembang</strong> dan <strong>IDEA PROMO</strong>,
+          lanjut ngatur guideline brand, sampai akhirnya kepo — <em>"kok bisa ya desain ini jadi website?"</em>
+          Nah dari situ aku mulai serius belajar <strong>HTML, CSS, dan JavaScript</strong>.
+        </p>
+      </article>
+
+      <article class="bento__card bento__card--hero glass reveal">
+        <span class="bento__label">Transisi</span>
+        <p class="bento__big">Desainer <span aria-hidden="true">➜</span><br />Developer</p>
+        <p class="bento__small">Skill desain jadi pondasi, coding jadi alat baru.</p>
+      </article>
+
+      <article class="bento__card bento__card--stats glass reveal">
+        <span class="bento__label">Singkatnya</span>
+        <ul class="miniStats">
+          <li><strong>4</strong> tahun bikin visual</li>
+          <li><strong>6</strong> software desain</li>
+          <li><strong>3</strong> bahasa web</li>
+          <li><strong>∞</strong> rasa penasaran</li>
+        </ul>
+      </article>
+
+      <article class="bento__card bento__card--tools glass reveal">
+        <span class="bento__label">Tools harian</span>
+        <div class="toolbadges">
+          <span>Photoshop</span><span>Illustrator</span><span>CorelDRAW</span>
+          <span>Canva</span><span>Kinemaster</span><span>CapCut</span>
+          <span>Microsoft Office</span>
+          <span class="toolbadges__dev">HTML</span>
+          <span class="toolbadges__dev">CSS</span>
+          <span class="toolbadges__dev">JavaScript</span>
+        </div>
+      </article>
+
+      <article class="bento__card bento__card--now glass reveal">
+        <span class="bento__label">Sekarang lagi…</span>
+        <ul class="nowlist">
+          <li>🎓 Kuliah Sistem Informasi di Universitas Terbuka Palembang</li>
+          <li>🎨 Rapikan portofolio &amp; perbanyak karya</li>
+          <li>💻 Latihan ngoding website dari nol</li>
+          <li>🤝 Terbuka untuk proyek freelance</li>
+        </ul>
+      </article>
+
+      <article class="bento__card bento__card--values glass reveal">
+        <span class="bento__label">Nilai yang aku pegang</span>
+        <p class="bento__quote">
+          "Kerja rapi, komunikasi jelas, dan jujur soal timeline — bukan cuma janji manis di brief."
+        </p>
+        <ul class="chips">
+          <li>Kreatif</li><li>Teliti</li><li>Komunikatif</li>
+          <li>Tim &amp; Individu</li><li>Cepat Adaptasi</li><li>Orientasi Hasil</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== SKILL ====== -->
+<section class="section section--alt" id="skill">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">02</span>
+      <h2 class="section__title">Skill &amp; Tools</h2>
+    </div>
+    <p class="section__lead reveal">
+      Setengah dari skill aku soal rasa dan komposisi, setengahnya lagi soal logika dan struktur.
+      Di bawah ini peta sederhananya.
+    </p>
+
+    <!-- Meter transisi: seberapa jauh pergeseran dari desain ke coding -->
+    <div class="meter glass reveal">
+      <div class="meter__row">
+        <span class="meter__tag meter__tag--design">🎨 Desain</span>
+        <span class="meter__arrow" aria-hidden="true">➜</span>
+        <span class="meter__tag meter__tag--code">💻 Coding</span>
+      </div>
+      <!-- GANTI: angka --split sesuai perasaanmu sendiri -->
+      <div class="meter__track"><i style="--split: 62%"></i></div>
+      <p class="meter__note">
+        Sekitar <strong>62%</strong> waktuku masih buat desain, sisanya buat ngoding —
+        dan porsinya terus bergeser tiap bulan.
+      </p>
+    </div>
+
+    <div class="skill">
+
+      <div class="skill__col glass reveal">
+        <h3 class="subhead">🎨 Kemampuan Desain</h3>
+        <div class="bar" data-level="90"><span class="bar__label">Adobe Photoshop <b>Advanced</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar" data-level="88"><span class="bar__label">Adobe Illustrator <b>Advanced</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar" data-level="85"><span class="bar__label">CorelDRAW <b>Advanced</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar" data-level="86"><span class="bar__label">Canva <b>Advanced</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar" data-level="75"><span class="bar__label">Editing Video — Kinemaster &amp; CapCut <b>Menengah</b></span><span class="bar__track"><i></i></span></div>
+      </div>
+
+      <div class="skill__col glass reveal">
+        <h3 class="subhead">💻 Kemampuan Coding &amp; Sistem</h3>
+        <div class="bar bar--code" data-level="72"><span class="bar__label">HTML5 <b>Menengah</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar bar--code" data-level="70"><span class="bar__label">CSS3 &amp; Responsive <b>Menengah</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar bar--code" data-level="52"><span class="bar__label">JavaScript Dasar <b>Dasar</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar bar--code" data-level="60"><span class="bar__label">Algoritma &amp; Logika Pemrograman <b>Dasar–Menengah</b></span><span class="bar__track"><i></i></span></div>
+        <div class="bar bar--code" data-level="62"><span class="bar__label">Analisis Sistem Informasi <b>Dasar–Menengah</b></span><span class="bar__track"><i></i></span></div>
+      </div>
+    </div>
+
+    <div class="skill__cards">
+      <h3 class="subhead reveal">Yang bisa aku kerjain</h3>
+      <div class="grid-2">
+        <div class="minicard glass reveal"><span aria-hidden="true">🖌️</span><h4>Desain Grafis</h4><p>Logo, poster, flyer, banner, feed &amp; story sosmed.</p></div>
+        <div class="minicard glass reveal"><span aria-hidden="true">🧩</span><h4>Identitas Brand</h4><p>Logo, palet warna, tipografi, guideline sederhana.</p></div>
+        <div class="minicard glass reveal"><span aria-hidden="true">📦</span><h4>Desain Kemasan</h4><p>Label &amp; packaging yang siap cetak.</p></div>
+        <div class="minicard glass reveal"><span aria-hidden="true">🌐</span><h4>Website Simpel</h4><p>Landing page &amp; portofolio dengan HTML, CSS, JS.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== KARYA ====== -->
+<section class="section" id="karya">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">03</span>
+      <h2 class="section__title">Karya Pilihan</h2>
+    </div>
+    <p class="section__lead reveal">
+      Kumpulan karya desain aku — dari poster, konten media sosial, sampai materi promosi.
+      Pakai filter di bawah buat lihat per kategori.
+    </p>
+
+    <div class="filters reveal" role="tablist" aria-label="Filter kategori karya">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Semua</button>
+      <button class="filter" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+      <button class="filter" data-filter="sosmed" role="tab" aria-selected="false">Media Sosial</button>
+      <button class="filter" data-filter="promosi" role="tab" aria-selected="false">Promosi</button>
+      <button class="filter" data-filter="poster" role="tab" aria-selected="false">Poster</button>
+    </div>
+
+    <!--
+      CATATAN (buat kamu, bukan buat pengunjung):
+      Tiap kartu mewakili satu seri karya. Daftar fotonya ada di atribut data-foto
+      (dipisah tanda |). Klik kartu -> galeri terbuka, foto bisa dilihat satu per satu.
+      Foto asli tetap tersimpan di img/, versi web (sudah dikompres) ada di img/opt/.
+    -->
+    <div class="works" id="works">
+
+      <!-- ===== BRANDING ===== -->
+      <article class="work work--pt reveal" data-cat="branding">
+        <div class="work__img">
+          <img src="img/opt/boba-1.jpg" alt="Seri desain minuman boba varian rasa" width="1080" height="1350" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Boba Series" data-foto="img/opt/boba-1.jpg|img/opt/boba-2.jpg|img/opt/boba-3.jpg|img/opt/boba-4.jpg|img/opt/minuman-boba.jpg" aria-label="Lihat 5 foto seri Boba"></button>
+          <span class="work__cat">Branding</span>
+          <span class="work__count" aria-hidden="true">5 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Boba Series</h3>
+          <p>Satu seri visual minuman boba: empat varian rasa plus papan menunya, dibikin pakai pola yang sama biar brand-nya kelihatan satu keluarga.</p>
+          <ul class="tags"><li>Seri</li><li>Warna</li><li>Menu</li></ul>
+        </div>
+      </article>
+
+      <!-- ===== MEDIA SOSIAL ===== -->
+      <article class="work work--sq reveal" data-cat="sosmed">
+        <div class="work__img">
+          <img src="img/opt/burger-1.jpg" alt="Seri konten media sosial Burger" width="1080" height="1080" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Burger Social Media" data-foto="img/opt/burger-1.jpg|img/opt/burger-2.jpg|img/opt/burger-3.jpg|img/opt/burger-4.jpg" aria-label="Lihat 4 foto konten burger"></button>
+          <span class="work__cat">Media Sosial</span>
+          <span class="work__count" aria-hidden="true">4 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Burger Series</h3>
+          <p>Koleksi desain feed Instagram bertema kuliner burger dengan visual yang bold dan menggugah selera.</p>
+          <ul class="tags"><li>Feed</li><li>Burger</li><li>Foodie</li></ul>
+        </div>
+      </article>
+
+      <article class="work work--sq reveal" data-cat="sosmed">
+        <div class="work__img">
+          <img src="img/opt/pizza-1.jpg" alt="Seri konten media sosial Pizza" width="1080" height="1080" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Pizza Social Media" data-foto="img/opt/pizza-1.jpg|img/opt/pizza-2.jpg|img/opt/pizza-3.jpg|img/opt/pizza-4.jpg" aria-label="Lihat 4 foto konten pizza"></button>
+          <span class="work__cat">Media Sosial</span>
+          <span class="work__count" aria-hidden="true">4 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Pizza Series</h3>
+          <p>Rangkaian desain media sosial untuk promosi menu pizza, fokus pada detail produk dan layout bersih.</p>
+          <ul class="tags"><li>Feed</li><li>Pizza</li><li>Italian</li></ul>
+        </div>
+      </article>
+
+      <!-- ===== PROMOSI ===== -->
+      <article class="work work--pt reveal" data-cat="promosi">
+        <div class="work__img">
+          <img src="img/opt/seblak-1.jpg" alt="Materi promosi Seblak Nampan" width="1080" height="1350" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Seblak Nampan" data-foto="img/opt/seblak-1.jpg|img/opt/seblak-2.jpg|img/opt/seblak-3.jpg|img/opt/seblak-4.jpg" aria-label="Lihat 4 foto promo seblak"></button>
+          <span class="work__cat">Promosi</span>
+          <span class="work__count" aria-hidden="true">4 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Seblak Nampan</h3>
+          <p>Seri materi promosi Seblak Nampan dengan visual yang menggugah selera dan tagline "bikin nagih".</p>
+          <ul class="tags"><li>Promo</li><li>Kuliner</li><li>Tagline</li></ul>
+        </div>
+      </article>
+
+      <article class="work work--pt reveal" data-cat="promosi">
+        <div class="work__img">
+          <img src="img/opt/nasgor-1.jpg" alt="Seri promosi Nasi Goreng" width="1080" height="1350" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Nasi Goreng Series" data-foto="img/opt/nasgor-1.jpg|img/opt/nasgor-2.jpg|img/opt/nasgor-3.jpg|img/opt/nasgor-4.jpg" aria-label="Lihat 4 foto promo nasi goreng"></button>
+          <span class="work__cat">Promosi</span>
+          <span class="work__count" aria-hidden="true">4 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Nasi Goreng Series</h3>
+          <p>Rangkaian konten promosi untuk menu Nasi Goreng, dirancang khusus untuk kebutuhan media sosial.</p>
+          <ul class="tags"><li>Promo</li><li>Kuliner</li><li>Feed</li></ul>
+        </div>
+      </article>
+
+      <!-- ===== POSTER ===== -->
+      <article class="work work--pt reveal" data-cat="poster">
+        <div class="work__img">
+          <img src="img/opt/c-ronaldo.jpg" alt="Koleksi poster atlet sepak bola" width="1080" height="1350" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Football Legends" data-foto="img/opt/c-ronaldo.jpg|img/opt/l-messi.jpg|img/opt/neymar-jr.jpg" aria-label="Lihat 3 foto poster atlet"></button>
+          <span class="work__cat">Poster</span>
+          <span class="work__count" aria-hidden="true">3 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Football Legends</h3>
+          <p>Seri poster minimalis bertema legenda sepak bola dunia: Cristiano Ronaldo, Lionel Messi, dan Neymar Jr.</p>
+          <ul class="tags"><li>Poster</li><li>Sepak Bola</li><li>Minimalis</li></ul>
+        </div>
+      </article>
+
+      <article class="work work--a4 reveal" data-cat="poster">
+        <div class="work__img">
+          <img src="img/opt/lake.jpg" alt="Poster tipografi bergaya Lake" width="991" height="1400" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Typography Series" data-foto="img/opt/lake.jpg|img/opt/road.jpg|img/opt/sunrise.jpg" aria-label="Lihat 3 foto poster tipografi"></button>
+          <span class="work__cat">Poster</span>
+          <span class="work__count" aria-hidden="true">3 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Typography Series</h3>
+          <p>Eksplorasi tipografi modern dengan tema alam (Lake, Road, Sunrise) dalam format poster A4.</p>
+          <ul class="tags"><li>Typography</li><li>A4 Poster</li><li>Nature</li></ul>
+        </div>
+      </article>
+
+      <article class="work work--pt reveal" data-cat="poster">
+        <div class="work__img">
+          <img src="img/opt/berserk.jpg" alt="Poster bergaya brutalism" width="1080" height="1350" loading="lazy" decoding="async" />
+          <button class="work__open" type="button" data-judul="Brutalism Project" data-foto="img/opt/berserk.jpg|img/opt/stephen-curry.jpg" aria-label="Lihat 2 foto poster brutalism"></button>
+          <span class="work__cat">Poster</span>
+          <span class="work__count" aria-hidden="true">2 foto</span>
+        </div>
+        <div class="work__body">
+          <h3>Brutalism Project</h3>
+          <p>Desain poster ekspresif dengan gaya brutalism, menampilkan visual yang berani dan penuh informasi.</p>
+          <ul class="tags"><li>Brutalism</li><li>Experimental</li><li>Artwork</li></ul>
+        </div>
+      </article>
+
+    </div>
+    <p class="works__empty" id="worksEmpty" hidden>Belum ada karya di kategori ini. Coba kategori lain ya 👀</p>
+  </div>
+</section>
+
+<!-- ====== LAYANAN ====== -->
+<section class="section section--alt" id="layanan">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">04</span>
+      <h2 class="section__title">Yang Bisa Aku Bantu</h2>
+    </div>
+
+    <div class="services">
+      <div class="service glass reveal">
+        <span class="service__no">01</span>
+        <h3>Logo &amp; Identitas Brand</h3>
+        <p>Bikin brand kamu punya "wajah" yang konsisten di semua tempat — logo, warna, tipografi, sampai aturan pakainya.</p>
+        <span class="service__tag">Branding</span>
+      </div>
+      <div class="service glass reveal">
+        <span class="service__no">02</span>
+        <h3>Konten Media Sosial</h3>
+        <p>Paket template feed, story, dan thumbnail yang tinggal dipakai ulang setiap minggu, tanpa mulai dari nol.</p>
+        <span class="service__tag">Sosmed</span>
+      </div>
+      <div class="service glass reveal">
+        <span class="service__no">03</span>
+        <h3>Materi Promosi</h3>
+        <p>Poster, flyer, banner, brosur, dan spanduk yang siap kirim ke percetakan — plus file siap cetaknya.</p>
+        <span class="service__tag">Cetak &amp; Digital</span>
+      </div>
+      <div class="service glass reveal">
+        <span class="service__no">04</span>
+        <h3>Desain Kemasan</h3>
+        <p>Label dan packaging produk yang informatif, gampang dibaca, dan tetap enak dilihat di rak.</p>
+        <span class="service__tag">Packaging</span>
+      </div>
+      <div class="service glass reveal">
+        <span class="service__no">05</span>
+        <h3>Landing Page Sederhana</h3>
+        <p>Satu halaman web buat profil usaha, event, atau portofolio — responsif, cepat, dan gampang di-update.</p>
+        <span class="service__tag">Web</span>
+      </div>
+      <div class="service glass reveal">
+        <span class="service__no">06</span>
+        <h3>Dukungan Desain &amp; Sistem</h3>
+        <p>Bantu rapikan alur kerja desain, struktur data konten, atau kebutuhan IT dasar untuk operasional kecil.</p>
+        <span class="service__tag">Sistem Informasi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PENGALAMAN ====== -->
+<section class="section" id="pengalaman">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">05</span>
+      <h2 class="section__title">Perjalanan Desain ➜ Kode</h2>
+    </div>
+
+    <ol class="timeline">
+      <li class="timeline__item reveal" data-side="code">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__date">Sekarang</span>
+        <h3>Desainer yang Mulai Ngoding</h3>
+        <p>Belajar HTML, CSS, dan JavaScript dari nol — dimulai dari bikin website portofolio ini sendiri. Dari situ aku paham gimana desain yang aku bikin harus bisa "hidup" di browser.</p>
+        <ul class="timeline__tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      </li>
+      <li class="timeline__item reveal" data-side="design">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__date">Februari 2026 – April 2026</span>
+        <h3>Desainer Grafis — Rumah Songket Gadis Palembang</h3>
+        <p>Mendesain materi promosi seperti poster, banner, brosur, dan konten media sosial sesuai identitas brand. Berkolaborasi dengan tim, melakukan revisi berdasarkan masukan atasan maupun pelanggan, serta mengelola file desain sampai siap dipakai untuk media digital dan cetak.</p>
+        <ul class="timeline__tags"><li>Desain Grafis</li><li>Sosmed</li><li>Branding</li></ul>
+      </li>
+      <li class="timeline__item reveal" data-side="code">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__date">2025 – Sekarang</span>
+        <h3>S1 Sistem Informasi — Universitas Terbuka Palembang</h3>
+        <p>Mempelajari dasar-dasar pemrograman, analisis dan perancangan sistem informasi, basis data, serta pengembangan aplikasi. Memahami konsep algoritma, logika pemrograman, dan proses pengembangan sistem berbasis teknologi informasi.</p>
+        <ul class="timeline__tags"><li>Sistem Informasi</li><li>Basis Data</li><li>Algoritma</li></ul>
+      </li>
+      <li class="timeline__item reveal" data-side="design">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__date">Juli 2024 – Desember 2024</span>
+        <h3>Tim Kreatif / Konten Kreator — LPK Putri Tunggal Jaya Abadi</h3>
+        <p>Bertanggung jawab sebagai tim kreatif konten kreator untuk mengelola akun media sosial LPK Putri Tunggal Jaya Abadi — membuat desain feed Instagram, story, dan sertifikat. Di periode yang sama juga mengikuti program bahasa Jepang yang disalurkan oleh Kedinasan Kerja Kota Palembang.</p>
+        <ul class="timeline__tags"><li>Konten</li><li>Feed &amp; Story</li><li>Sertifikat</li></ul>
+      </li>
+      <li class="timeline__item reveal" data-side="design">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__date">Februari 2024 – Juni 2024</span>
+        <h3>Kerja Praktik — IDEA PROMO</h3>
+        <p>Membantu staf pengiriman media promosi: instalasi banner di lokasi klien, finishing fisik banner (pemotongan, laminating, pengecekan akhir), serta membuat desain banner, poster, dan materi promosi lain yang disesuaikan dengan kebutuhan audiens dan karakter acara.</p>
+        <ul class="timeline__tags"><li>Banner</li><li>Cetak</li><li>Promosi</li></ul>
+      </li>
+      <li class="timeline__item reveal" data-side="design">
+        <span class="timeline__dot" aria-hidden="true"></span>
+        <span class="timeline__date">2022 – 2025</span>
+        <h3>SMK Negeri 7 Palembang — Desain Komunikasi Visual</h3>
+        <p>Sekretaris OSIS selama satu periode, Ketua ekstrakurikuler basket, atlet Taekwondo selama dua tahun, dan tim kreatif sekolah selama tiga tahun yang menangani desain acara, poster, dan media sosial.</p>
+        <ul class="timeline__tags"><li>DKV</li><li>Organisasi</li><li>Tim Kreatif</li></ul>
+      </li>
+    </ol>
+
+    <div class="cta-strip glass reveal">
+      <div>
+        <h3>Butuh orang yang ngerti desain <em>dan</em> ngerti sistem?</h3>
+        <p>Ceritakan kebutuhanmu, aku bantu susun solusi visual dan teknisnya.</p>
+      </div>
+      <a href="#kontak" class="btn btn--primary">Hubungi Aku <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== KONTAK ====== -->
+<section class="section section--accent" id="kontak">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">06</span>
+      <h2 class="section__title">Yuk, Ngobrol!</h2>
+    </div>
+
+    <div class="contact">
+      <div class="contact__text reveal">
+        <p class="contact__big">
+          Punya proyek, lowongan, atau cuma mau tanya soal desain dan web?
+          Kirim pesan — aku bales secepatnya. 🙌
+        </p>
+        <div class="contact__actions">
+          <a href="mailto:fernandopratama0327@gmail.com" class="btn btn--primary">Email Aku</a>
+          <a href="cv.pdf" class="btn btn--ghost" data-cv>Download CV</a>
+        </div>
+      </div>
+
+      <ul class="contact__list glass reveal">
+        <li>
+          <span class="contact__label">Email</span>
+          <a href="mailto:fernandopratama0327@gmail.com">fernandopratama0327@gmail.com</a>
+        </li>
+        <li>
+          <span class="contact__label">WhatsApp</span>
+          <a href="https://wa.me/6281916857905" target="_blank" rel="noopener">+62 819-1685-7905</a>
+        </li>
+        <li>
+          <span class="contact__label">Instagram</span>
+          <a href="https://instagram.com/NanDoo_" target="_blank" rel="noopener">@NanDoo_</a>
+        </li>
+        <li>
+          <span class="contact__label">Lokasi</span>
+          <span class="contact__plain">Palembang, Indonesia · bisa remote</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__brand">✦ <span class="nav__logo-text">nando<b>.dev</b></span></p>
+    <p class="footer__note">Dirancang di aplikasi desain, dibangun sendiri pakai HTML, CSS, JS — plus banyak kopi &amp; Ctrl+Z.</p>
+    <p class="footer__copy">© <span id="year">2026</span> M. Fernando Pratama. Portofolio DKV &amp; Sistem Informasi.</p>
+  </div>
+  <button class="totop" id="toTop" aria-label="Kembali ke atas" type="button">↑</button>
+</footer>
+
+<!-- ====== GALERI KARYA (lightbox) ====== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" hidden>
+  <div class="lightbox__panel">
+    <div class="lightbox__head">
+      <p class="lightbox__title" id="lightboxTitle">Karya</p>
+      <span class="lightbox__count" id="lightboxCount">1 / 1</span>
+      <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Tutup galeri">✕</button>
+    </div>
+
+    <div class="lightbox__stage" id="lightboxStage">
+      <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Foto sebelumnya">‹</button>
+      <img class="lightbox__img" id="lightboxImg" alt="" />
+      <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Foto berikutnya">›</button>
+    </div>
+
+    <div class="lightbox__thumbs" id="lightboxThumbs"></div>
+    <p class="lightbox__hint" id="lightboxHint">Geser foto atau pakai tombol ‹ › buat lihat yang lain</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
